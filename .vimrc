@@ -14,3 +14,8 @@ command Wq wq
 set undofile
 set undodir=/home/ultravader/vimundo
 set viminfo='20,\"1000
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+au Syntax * RainbowParenthesesLoadChevrons
