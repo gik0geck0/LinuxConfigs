@@ -8,6 +8,8 @@ export PS1="%n:%~%% "
 export HISTSIZE=9999
 export HISTFILE="$HOME/.history"
 
+alias renametwm='wmname LG3D'
+
 #key[Home]=${terminfo[khome]}
 #key[End]=${terminfo[kend]}
 #key[Delete]=${terminfo[kdch1]}

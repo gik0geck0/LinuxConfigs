@@ -1,3 +1,5 @@
+" Matt Buland's vimrc
+
 set nocompatible
 filetype plugin on
 colorscheme delek
