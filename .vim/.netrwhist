@@ -1,7 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/etc/rc.d'
 let g:netrw_dirhist_2='/home/ultravader/.config/tint2'
 let g:netrw_dirhist_3='/home/ultravader/schoolWork/spring13/db/Project01'
 let g:netrw_dirhist_4='/home/ultravader/.vim'
 let g:netrw_dirhist_5='/home/ultravader/GitRepos/LinuxConfigs'
+let g:netrw_dirhist_6='/home/ultravader/schoolWork/spring13/csci446/src/project03p2/views'
+let g:netrw_dirhist_7='/mnt/network/Common'

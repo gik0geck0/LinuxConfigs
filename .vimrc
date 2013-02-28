@@ -1,6 +1,7 @@
 " Matt Buland's vimrc
 
 set nocompatible
+set nowrap
 filetype plugin on
 colorscheme delek
 syntax on
@@ -18,4 +19,4 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
-au Syntax * RainbowParenthesesLoadChevrons
+" au Syntax * RainbowParenthesesLoadChevrons

@@ -4,6 +4,7 @@ compinit
 autoload -U promptinit
 promptinit
 export PS1="%n:%~%% "
+export PATH="$PATH:/home/ultravader/bin"
 
 export HISTSIZE=9999
 export HISTFILE="$HOME/.history"
