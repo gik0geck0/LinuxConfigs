@@ -1,14 +1,35 @@
 import Data.Monoid
 import System.Exit
 
+import qualified Data.Map as M
+import qualified XMonad.StackSet as W
+
 import XMonad
+
+import XMonad.Hooks.DynamicLog
+import XMonad.Hooks.ManageHelpers
+
+import XMonad.Layout.NoBorders
+import XMonad.Layout.MosaicAlt
+import XMonad.Layout.Tabbed
+
 import XMonad.Util.Run
 
-main = do
-	dzen2 <- spawnPipe myStatusBar
-	xmonad $ defaultConfig
-		{
-			terminal	= "terminology"
+layoutDefault = mosaicLayout ||| fullLayout
+
+----------------------
+----Customized Layouts--
+------------------------
+fullLayout = noBorders Full
+tiledLayout = Tall 1 (1/50) (1/2)
+mosaicLayout = MosaicAlt M.empty
+--tabbedLayout = tabbed shrinkText defaultTheme
+--comboTabed = combineTwo tiledLayout tabbedLayout tabbedLayout
+
+
+
+main = xmonad  =<< xmobar defaultConfig {
+			terminal	= "terminology",
+			layoutHook = smartBorders $ layoutDefault
 		}
 
-myStatusBar = "time | dzen2 -x '0' -y '0' -h '16' -ta 'l'"
