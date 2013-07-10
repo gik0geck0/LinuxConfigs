@@ -29,7 +29,7 @@ mosaicLayout = MosaicAlt M.empty
 
 
 main = xmonad  =<< xmobar defaultConfig {
-			terminal	= "terminology",
+			terminal	= "urxvt",
 			layoutHook = smartBorders $ layoutDefault
 		}
 

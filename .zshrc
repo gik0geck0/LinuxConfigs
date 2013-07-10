@@ -4,7 +4,7 @@ compinit
 autoload -U promptinit
 promptinit
 export PS1="%n:%~%% "
-export PATH="$PATH:/home/ultravader/bin"
+export PATH="$PATH:/home/gik0geck0/bin:/home/gik0geck0/.cabal/bin"
 export JAVA_HOME="/usr/lib/jvm/java-7-openjdk/"
 
 export HISTSIZE=9999
