@@ -14,6 +14,10 @@ setlocal softtabstop=4
 setlocal shiftwidth=4
 setlocal expandtab
 
+set list listchars=tab:\|\ ,trail:¤,nbsp:¤
+hi SpecialKey ctermbg=NONE guibg=NONE
+hi SpecialKey ctermfg=red guifg=red
+
 set number
 command W w
 command Wq wq
