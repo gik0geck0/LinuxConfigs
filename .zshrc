@@ -11,7 +11,7 @@ export HISTFILE="$HOME/.history"
 export JAVA_HOME="/usr/lib/jvm/java-7-openjdk/"
 
 export PS1="%n:%~%% "
-export PATH="$PATH:/home/gik0geck0/bin:/home/gik0geck0/.cabal/bin"
+export PATH="$PATH:/home/$USER/bin:/home/$USER/.cabal/bin"
 export SVN_EDITOR="/usr/bin/vim"
 
 
