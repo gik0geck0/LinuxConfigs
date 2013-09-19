@@ -1,6 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/home/ultravader/pythonChallenge/xkcd'
 let g:netrw_dirhist_2='/home/ultravader/schoolWork/spring13/csci446/src/DynamicTicketingSystem/app/views/tickets'
 let g:netrw_dirhist_3='/home/ultravader/schoolWork/spring13/csci446/src/DynamicTicketingSystem/app/models'
 let g:netrw_dirhist_4='/home/ultravader/schoolWork/spring13/csci446/src/DynamicTicketingSystem/app/views/layouts'
+let g:netrw_dirhist_5='/home/gik0geck0/Dropbox/SchoolNotes/ComputerSimulation'
+let g:netrw_dirhist_6='/home/gik0geck0/Programming/haskell/99haskell_problems/1_10'
+let g:netrw_dirhist_7='/home/gik0geck0/GitRepos/android_apps/app1'
+let g:netrw_dirhist_8='/home/gik0geck0/GitRepos/computer_simulations/journal'

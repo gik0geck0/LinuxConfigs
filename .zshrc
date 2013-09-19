@@ -3,6 +3,8 @@ compinit
 
 autoload -U promptinit
 promptinit
+
+export CLASSPATH="/opt/android-sdk/platforms/android-16/android.jar:$CLASSPATH"
 export PS1="%n:%~%% "
 export PATH="$PATH:/home/gik0geck0/bin:/home/gik0geck0/.cabal/bin"
 export JAVA_HOME="/usr/lib/jvm/java-7-openjdk/"
@@ -32,3 +34,8 @@ source ${ZDOTDIR:-$HOME}/.zkbd/rxvt-unicode-256color-:0.0
 [[ -n ${key[Left]} ]] && bindkey "${key[Left]}" backward-char
 [[ -n ${key[Down]} ]] && bindkey "${key[Down]}" down-line-or-search
 [[ -n ${key[Right]} ]] && bindkey "${key[Right]}" forward-char
+
+alias catkin_make='catkin_make -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so'
+alias catkin_make_isolated='catkin_make_isolated -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so'
+
+source /opt/ros/groovy/setup.zsh

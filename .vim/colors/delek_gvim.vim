@@ -50,7 +50,11 @@ hi Constant   cterm=NONE ctermfg=DarkGreen   gui=NONE guifg=green3
 hi Identifier cterm=NONE ctermfg=DarkCyan    gui=NONE guifg=cyan4
 hi PreProc    cterm=NONE ctermfg=DarkMagenta gui=NONE guifg=magenta3
 hi Special    cterm=NONE ctermfg=LightRed    gui=NONE guifg=deeppink
-hi Statement  cterm=bold ctermfg=Blue	     gui=bold guifg=blue
-hi Type	      cterm=NONE ctermfg=Blue	     gui=bold guifg=blue
+" Statement guifg will highlight if, syntax, endif, let, hi, set...
+hi Statement  cterm=bold ctermfg=Blue	     gui=bold guifg=#B959FF
+" Type guifg will highlight reset, Normal, Cursor, lCurosr, DiffAdd, and all
+" the key-parts of the key-value pairs, plus occasionally some recognized
+" types (like Black, Magenta, etc)
+hi Type	      cterm=NONE ctermfg=Blue	     gui=bold guifg=#4949D0
 
 " vim: sw=2

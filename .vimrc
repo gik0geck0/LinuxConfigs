@@ -25,7 +25,13 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 " au Syntax * RainbowParenthesesLoadChevrons
+
+filetype plugin on
 filetype plugin indent on
+if has("autocmd")
+    autocmd Filetype java setlocal omnifunc=javacomplete#Complete
+    autocmd Filetype java setlocal completefunc=javacomplete#Complete
+endif
 
 if has('gui_running')
 	set guioptions=cat
