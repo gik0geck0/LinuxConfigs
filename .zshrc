@@ -3,14 +3,8 @@ compinit
 
 autoload -U promptinit
 promptinit
-<<<<<<< HEAD
 
 export CLASSPATH="/opt/android-sdk/platforms/android-16/android.jar:$CLASSPATH"
-export PS1="%n:%~%% "
-export PATH="$PATH:/home/gik0geck0/bin:/home/gik0geck0/.cabal/bin"
-export JAVA_HOME="/usr/lib/jvm/java-7-openjdk/"
-=======
->>>>>>> 0ce84872314c5105f92bd5063757a076f8df7ab9
 
 export HISTSIZE=9999
 export HISTFILE="$HOME/.history"
