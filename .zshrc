@@ -1,21 +1,32 @@
 autoload -U compinit
 compinit
 
+export FPATH="$HOME/.zshcomp:$FPATH"
+
+# Fuzzy completion and error correcting
+zstyle ':completion:*' completer _complete _match _approximate
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*:approximate:*' max-errors 1 numeric
+
+# Automatically rehash when completing
+zstyle ":completion:*" rehash yes
+
 autoload -U promptinit
 promptinit
 
-export CLASSPATH="/opt/android-sdk/platforms/android-16/android.jar:$CLASSPATH"
+# export CLASSPATH="/opt/android-sdk/platforms/android-16/android.jar:$CLASSPATH"
 
 export HISTSIZE=9999
 export HISTFILE="$HOME/.history"
 
 # java home, typically for arch linux
-export JAVA_HOME="/usr/lib/jvm/java-7-openjdk/"
+# export JAVA_HOME="/usr/lib/jvm/java-7-openjdk/"
 
-export PS1="%n:%~%% "
-export PATH="$PATH:/home/$USER/bin:/home/$USER/.cabal/bin"
+export PS1="%n:%~%# "
+export PATH="$PATH:$HOME/bin:$HOME/bin/android-sdk-linux/platform-tools:$HOME/bin/android-sdk-linux/tools:$HOME/.gem/ruby/2.0.0/bin"
+# Prioritize cabal binaries over system binaries
+export PATH="$HOME/.cabal/bin:$PATH"
 export SVN_EDITOR="/usr/bin/vim"
-
 
 alias renametwm='wmname LG3D'
 alias vim=gvim
@@ -25,10 +36,13 @@ autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '\C-x\C-i' edit-command-line
 
+# Pushline
+bindkey '^[l' push-line
+
 # ZKBD autobind to get fancy keys (home/end)
 autoload zkbd
-[[ ! -f ${ZDOTDIR:-$HOME}/.zkbd/rxvt-unicode-256color.tmp ]] && zkbd
-source ${ZDOTDIR:-$HOME}/.zkbd/rxvt-unicode-256color.tmp
+[[ ! -f ${ZDOTDIR:-$HOME}/.zkbd/linux.tmp ]] && zkbd
+source ${ZDOTDIR:-$HOME}/.zkbd/linux.tmp
 
 [[ -n ${key[Backspace]} ]] && bindkey "${key[Backspace]}" backward-delete-char
 [[ -n ${key[Insert]} ]] && bindkey "${key[Insert]}" overwrite-mode
@@ -42,7 +56,12 @@ source ${ZDOTDIR:-$HOME}/.zkbd/rxvt-unicode-256color.tmp
 [[ -n ${key[Down]} ]] && bindkey "${key[Down]}" down-line-or-search
 [[ -n ${key[Right]} ]] && bindkey "${key[Right]}" forward-char
 
-alias catkin_make='catkin_make -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so'
-alias catkin_make_isolated='catkin_make_isolated -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so'
+export ANDROID_HOME=/home/gik0geck0/bin/android-sdk-linux
 
-source /opt/ros/groovy/setup.zsh
+# RVM pathing and versioning
+# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# source ~/.rvm/scripts/rvm
+# rvm use 2.0.0
+
+# Helps with grading rails projects
+# alias railstrap=~/csci446grading/GitRepos/rails_test_suite.bash
