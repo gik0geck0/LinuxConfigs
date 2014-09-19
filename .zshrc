@@ -65,3 +65,4 @@ export ANDROID_HOME=/home/gik0geck0/bin/android-sdk-linux
 
 # Helps with grading rails projects
 # alias railstrap=~/csci446grading/GitRepos/rails_test_suite.bash
+export JAVA_HOME=/usr/lib/jvm/default

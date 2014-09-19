@@ -22,7 +22,7 @@ set number
 command W w
 command Wq wq
 set undofile
-set undodir=/home/ultravader/vimundo
+set undodir=~/vimundo
 set viminfo='20,\"1000
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
@@ -38,6 +38,6 @@ if has("autocmd")
 endif
 
 if has('gui_running')
-	set guioptions=cat
-	set guifont=droidsansmono\ 8
+    set guioptions=cat
+    set guifont=Source\ Code\ Pro\ 11
 endif
