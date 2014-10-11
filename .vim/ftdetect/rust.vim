@@ -1,0 +1,1 @@
+/home/gik0geck0/.vim/bundle/rust.vim/ftdetect/rust.vim

@@ -2,7 +2,6 @@
 
 set nocompatible
 set nowrap
-filetype plugin on
 colorscheme delek_gvim
 syntax on
 set smartindent
@@ -30,8 +29,6 @@ au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 " au Syntax * RainbowParenthesesLoadChevrons
 
-filetype plugin on
-filetype plugin indent on
 if has("autocmd")
     autocmd Filetype java setlocal omnifunc=javacomplete#Complete
     autocmd Filetype java setlocal completefunc=javacomplete#Complete
@@ -41,3 +38,33 @@ if has('gui_running')
     set guioptions=cat
     set guifont=Source\ Code\ Pro\ 11
 endif
+
+"NeoBundles
+" Note: Skip initialization for vim-tiny or vim-small.
+if !1 | finish | endif
+
+if has('vim_starting')
+  " Required:
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" My Bundles here:
+" Refer to |:NeoBundle-examples|.
+" Note: You don't set neobundle setting in .gvimrc!
+NeoBundle 'wting/rust.vim'
+NeoBundle 'Floobits/floobits-vim'
+
+call neobundle#end()
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+
+filetype plugin indent on

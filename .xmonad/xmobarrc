@@ -1,0 +1,44 @@
+Config { font = "xft:DejaVu Serif:size=8"
+    , bgColor = "black"
+    , fgColor = "white"
+    , position = Top
+    , commands = [
+          Run Memory [ "-t", "Mem: <used>M (<usedratio>%)"
+            , "-H", "6000"
+            , "-L", "1000"
+            , "--low", "green"
+            , "--normal", "yellow"
+            , "--high", "red"
+        ] 10
+        , Run MultiCpu [ "-t", "CPU: <total>%"
+            , "-H", "25"
+            , "-L", "5"
+            , "--high", "red"
+            , "--normal", "yellow"
+            , "--low", "green"
+        ] 10
+        , Run Network "wlp2s0" [
+              "-t", "wlp2so: Recv: <rx>, Send: <tx>"
+            , "-H" , "200"
+            , "-L" , "10"
+            , "-h" , "#FFB6B0"
+            , "-l" , "#CEFFAC"
+            , "-n" , "#FFFFCC"
+        ] 10
+        , Run BatteryP ["BAT0"] [ "-t", "<watts> (<left>%)"
+            , "--"
+            , "-O", ""
+            , "-o", ""
+            , "-L", "30"
+            , "-H", "80"
+            , "-l", "red"
+            , "-m", "yellow"
+            , "-h", "green"
+        ] 300
+        , Run Date "%d %B %Y %H:%M:%S" "date" 10
+        , Run StdinReader
+    ]
+    , sepChar = "%"
+    , alignSep = "}{"
+    , template = "<fc=red>::</fc>  %StdinReader%  }{ %wlp2s0%   %multicpu%   <fc=red>»</fc>   %memory%   <fc=red>|</fc>   %battery%   <fc=red>»</fc>   <fc=yellow>%date%</fc>"
+}
