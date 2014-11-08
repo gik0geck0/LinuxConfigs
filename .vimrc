@@ -8,10 +8,10 @@ set smartindent
 set autoindent
 
 " soft tabs
-setlocal tabstop=4
-setlocal softtabstop=4
-setlocal shiftwidth=4
-setlocal expandtab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
 
 set list listchars=tab:\|\ ,trail:¤,nbsp:¤
 hi SpecialKey ctermbg=NONE guibg=NONE

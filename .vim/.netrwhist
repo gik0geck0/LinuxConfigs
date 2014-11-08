@@ -1,3 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
-let g:netrw_dirhist_1='/home/gik0geck0/floobits/gik0geck0/TestWorkspace'
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/gik0geck0/csci261/hw11/src'
+let g:netrw_dirhist_2='/home/gik0geck0/csci261/hw11'
+let g:netrw_dirhist_3='/home/gik0geck0/csci261/hw11/src'
+let g:netrw_dirhist_4='/home/gik0geck0'
+let g:netrw_dirhist_5='/home/gik0geck0/floobits/gik0geck0/CSCI-261/labs/Lab32'
+let g:netrw_dirhist_6='/home/gik0geck0/floobits/gik0geck0/CSCI-261/labs'
+let g:netrw_dirhist_7='/home/gik0geck0/floobits/gik0geck0/CSCI-261/labs/Lab32'
