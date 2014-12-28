@@ -34,6 +34,7 @@ main = do
     xmbpipe <- spawnPipe "xmobar ~/.xmonad/xmobarrc"
     xmonad $ defaultConfig {
               terminal    = "urxvtc"
+            , modMask = modKey
             , layoutHook = avoidStruts $ smartBorders $ layoutDefault
             , keys = myKeys
             , startupHook = myStartupHook
@@ -51,7 +52,7 @@ myStartupHook :: X()
 myStartupHook = do
     setWMName "LG3D"
 
-modKey = mod1Mask
+modKey = mod4Mask
 
 xmLogHook pipe = xmobarPP
     {
