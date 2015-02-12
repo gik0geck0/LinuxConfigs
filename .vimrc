@@ -20,9 +20,7 @@ hi SpecialKey ctermfg=red guifg=red
 set number
 command W w
 command Wq wq
-set undofile
-set undodir=~/vimundo
-set viminfo='20,\"1000
+
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare

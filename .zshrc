@@ -30,6 +30,7 @@ export SVN_EDITOR="/usr/bin/vim"
 
 alias renametwm='wmname LG3D'
 alias vim=gvim
+alias allcolors='(x=`tput op` y=`printf %80s`;for i in {0..255};do o=00$i;echo -e ${o:${#o}-3:3} `tput setaf $i;tput setab $i`${y// /=}$x;done)'
 
 # Open current line in vim
 autoload -U edit-command-line

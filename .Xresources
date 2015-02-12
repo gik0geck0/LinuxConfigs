@@ -49,7 +49,6 @@ URxvt.pointerBlank: true
 
 ! aura -A urxvt-font-size-git
 ! ln -s /usr/lib/urxvt/perl/font-size ~/.urxvt/ext/font-size
-URxvt.perl-lib: $HOME/.urxvt/ext
 URxvt.perl-ext-common: font-size
 !Make Ctrl-<-+=> change between three font sizes
 !URxvt.keysym.C-minus: command:\033]710;-zevv-peep-*-*-*-*-14-*-*-*-*-*-*-*\007
