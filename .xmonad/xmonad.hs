@@ -33,7 +33,7 @@ mosaicLayout = MosaicAlt M.empty
 main = do
     xmbpipe <- spawnPipe "xmobar ~/.xmonad/xmobarrc"
     xmonad $ defaultConfig {
-              terminal    = "urxvtc"
+              terminal    = "urxvt"
             , modMask = modKey
             , layoutHook = avoidStruts $ smartBorders $ layoutDefault
             , keys = myKeys

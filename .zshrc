@@ -2,6 +2,7 @@ autoload -U compinit
 compinit
 
 export FPATH="$HOME/.zshcomp:$FPATH"
+export TERM=xterm   # for compat
 
 # Fuzzy completion and error correcting
 zstyle ':completion:*' completer _complete _match _approximate
@@ -22,14 +23,14 @@ export HISTFILE="$HOME/.history"
 # java home, typically for arch linux
 # export JAVA_HOME="/usr/lib/jvm/java-7-openjdk/"
 
-export PS1="%n:%~%# "
+export PS1="%n@%m:%~%# "
 export PATH="$PATH:$HOME/bin:$HOME/bin/android-sdk-linux/platform-tools:$HOME/bin/android-sdk-linux/tools:$HOME/.gem/ruby/2.0.0/bin"
 # Prioritize cabal binaries over system binaries
 export PATH="$HOME/.cabal/bin:$PATH"
 export SVN_EDITOR="/usr/bin/vim"
 
 alias renametwm='wmname LG3D'
-alias vim=gvim
+# alias vim=gvim
 alias allcolors='(x=`tput op` y=`printf %80s`;for i in {0..255};do o=00$i;echo -e ${o:${#o}-3:3} `tput setaf $i;tput setab $i`${y// /=}$x;done)'
 
 # Open current line in vim

@@ -30,9 +30,9 @@
 *cursorColor : #b0d0f0
 
 !! Font config
-URxvt.font: xft:Source Code Pro:size=12
+URxvt.font: xft:Terminus:size=18
 
-URxvt.letterSpace: 0
+URxvt.letterSpace: -6
 URxvt.scrollstyle: plain
 URxvt.saveLines: 20000
 !borderLess needs to be off for xmonad to not go nuts
@@ -56,3 +56,6 @@ URxvt.perl-ext-common: font-size
 !URxvt.keysym.C-plus: command:\033]710;-zevv-peep-*-*-*-*-20-*-*-*-*-*-*-*\007
 URxvt.keysym.C-equal: perl:font-size:increase
 URxvt.keysym.C-minus: perl:font-size:decrease
+
+xterm*faceName: xft:Terminus:size=18
+!Xft.dpi: 174
