@@ -1,5 +1,5 @@
 
-setxkbmap dvorak -option caps:escape
+# setxkbmap dvorak -option caps:escape
 xrdb ~/.Xresources
 xset -dpms s off
 pulseaudio --start
